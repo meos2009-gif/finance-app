@@ -1,10 +1,8 @@
-/* LAYOUT BASE */
 .layout {
   display: flex;
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  position: relative;
 }
 
 /* ÁREA PRINCIPAL */
@@ -12,41 +10,28 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  transition: margin-left 0.3s ease;
-}
-
-/* NO DESKTOP, QUANDO O MENU ESTÁ ABERTO */
-.sidebar-open .main-area {
-  margin-left: 250px;
-}
-
-/* CONTEÚDO */
-.main-content {
-  flex: 1;
-  padding: 30px 40px;
-  width: 100%;
-}
-
-/* OVERLAY ESCURO PARA MOBILE */
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(4px);
-  z-index: 9;
-  display: none;
-}
-
-.menu-overlay.active {
-  display: block;
+  padding-left: 240px; /* sidebar no desktop */
+  transition: padding-left 0.3s ease;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
   .main-area {
-    margin-left: 0 !important;
+    padding-left: 0; /* sidebar escondido */
   }
+}
+
+/* CONTEÚDO */
+.main-content {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+/* OVERLAY MOBILE */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+  z-index: 150;
 }
