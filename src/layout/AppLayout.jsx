@@ -7,7 +7,16 @@ export default function AppLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="layout">
+    <div className={`layout ${sidebarOpen ? "sidebar-open" : ""}`}>
+      
+      {/* OVERLAY ESCURO (MOBILE) */}
+      {sidebarOpen && (
+        <div
+          className="menu-overlay active"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       <Sidebar 
         isOpen={sidebarOpen}
         toggleSidebar={() => setSidebarOpen(false)}

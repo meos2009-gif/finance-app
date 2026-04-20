@@ -1,21 +1,52 @@
+/* LAYOUT BASE */
 .layout {
   display: flex;
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
+  position: relative;
 }
 
-/* ESTA LINHA É A CHAVE DO PROBLEMA */
+/* ÁREA PRINCIPAL */
 .main-area {
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 250px; /* empurra o conteúdo para a direita */
+  transition: margin-left 0.3s ease;
 }
 
+/* NO DESKTOP, QUANDO O MENU ESTÁ ABERTO */
+.sidebar-open .main-area {
+  margin-left: 250px;
+}
+
+/* CONTEÚDO */
 .main-content {
   flex: 1;
   padding: 30px 40px;
   width: 100%;
-  margin: 0;
+}
+
+/* OVERLAY ESCURO PARA MOBILE */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9;
+  display: none;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .main-area {
+    margin-left: 0 !important;
+  }
 }
