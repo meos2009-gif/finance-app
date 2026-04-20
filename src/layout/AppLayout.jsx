@@ -9,13 +9,11 @@ export default function AppLayout({ children }) {
   return (
     <div className="layout">
 
-      {/* OVERLAY — só aparece no mobile quando o menu está aberto */}
-      {sidebarOpen && (
-        <div
-          className="overlay"
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
+      {/* OVERLAY MOBILE */}
+      <div
+        className={`overlay ${sidebarOpen ? "active" : ""}`}
+        onClick={() => setSidebarOpen(false)}
+      />
 
       <Sidebar 
         isOpen={sidebarOpen}
