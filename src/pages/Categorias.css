@@ -1,0 +1,115 @@
+/* PÁGINA */
+.categorias-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* TÍTULO */
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* FORMULÁRIO PREMIUM */
+.form-premium {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #141414;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #26263a;
+}
+
+.form-premium label {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.form-premium input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #0f0f17;
+  color: #fff;
+  font-size: 16px;
+}
+
+.form-premium button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4ea1ff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form-premium button:hover {
+  background: #6bb4ff;
+}
+
+/* PAINEL */
+.panel {
+  background: #141414;
+  border: 1px solid #26263a;
+  padding: 1.4rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  color: #fff;
+}
+
+.panel h2 {
+  margin-bottom: 1rem;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* TABELA */
+.categorias-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+
+.categorias-table th,
+.categorias-table td {
+  padding: 0.9rem;
+  border-bottom: 1px solid #333;
+}
+
+.categorias-table th {
+  background: #202030;
+  font-weight: 600;
+}
+
+.categorias-table tr:last-child td {
+  border-bottom: none;
+}
+
+.delete-btn {
+  background: #f44336;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #ff5c5c;
+}
+
+/* TEXTOS */
+.info-text {
+  color: #ccc;
+}

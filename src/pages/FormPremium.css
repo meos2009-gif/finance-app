@@ -1,0 +1,88 @@
+.form-premium {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #11121a;
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid #232436;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* LABELS */
+.form-premium label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #cfd0ff;
+}
+
+/* INPUTS */
+.form-premium input,
+.form-premium select {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 12px;
+  border: 1px solid #2f3145;
+  background: #181a24;
+  color: #ffffff;
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.form-premium input::placeholder,
+.form-premium select::placeholder {
+  color: #6f7085;
+}
+
+.form-premium input:focus,
+.form-premium select:focus {
+  border-color: #7c7dff;
+  box-shadow: 0 0 0 1px #7c7dff33;
+  outline: none;
+  background: #1b1d29;
+}
+
+/* BOTÃO */
+.form-premium button {
+  margin-top: 6px;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #7c7dff, #4f8cff);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.form-premium button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(79, 140, 255, 0.45);
+  filter: brightness(1.03);
+}
+
+.form-premium button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 14px rgba(79, 140, 255, 0.35);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .form-premium {
+    padding: 18px;
+    border-radius: 14px;
+    gap: 14px;
+  }
+
+  .form-premium input,
+  .form-premium select {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .form-premium button {
+    padding: 13px;
+    font-size: 14px;
+  }
+}

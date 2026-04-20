@@ -1,0 +1,21 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ESTA LINHA É A CHAVE DO PROBLEMA */
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px; /* empurra o conteúdo para a direita */
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+  width: 100%;
+  margin: 0;
+}

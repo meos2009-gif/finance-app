@@ -1,0 +1,54 @@
+.receitas-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* PAINEL */
+.panel {
+  background: #181824;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #26263a;
+}
+
+/* TABELA */
+.excel-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.excel-table th,
+.excel-table td {
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+.value-income {
+  color: #7ee787;
+}
+
+/* BOTÕES */
+.edit-btn {
+  background: #2196f3;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #fff;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #f44336;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
